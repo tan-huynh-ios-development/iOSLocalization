@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Setting" id="BYZ-38-t0r" customClass="SettingViewController" customModule="iOSLocalization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-KV-yv9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Setting" id="Mok-Fb-KFN"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-ps-9Ca">
+                                <rect key="frame" x="0.0" y="732" width="414" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9G-ao-PoJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="30"/>
+                                        <state key="normal" title="English"/>
+                                        <connections>
+                                            <action selector="didTapEnglish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXt-FF-fJI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JB-5d-mIf">
+                                        <rect key="frame" x="141.5" y="0.0" width="131" height="30"/>
+                                        <state key="normal" title="Spanish"/>
+                                        <connections>
+                                            <action selector="didTapSpanish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PM-ka-xnu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQG-D2-s7c">
+                                        <rect key="frame" x="282.5" y="0.0" width="131.5" height="30"/>
+                                        <state key="normal" title="Vietnamese"/>
+                                        <connections>
+                                            <action selector="didTapVietnamese:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sz-Ee-HYK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN2-ID-cMX">
+                                <rect key="frame" x="171.5" y="433" width="71" height="30"/>
+                                <state key="normal" title="Click Here"/>
+                                <connections>
+                                    <segue destination="b9M-Bs-u0a" kind="show" id="uKq-TD-if1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SN2-ID-cMX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4cs-r7-bwf"/>
+                            <constraint firstItem="SN2-ID-cMX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Uz-OE-oWU"/>
+                            <constraint firstItem="2Q2-KV-yv9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EX2-OM-3cO"/>
+                            <constraint firstItem="Vah-ps-9Ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f1I-Pp-DJ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vah-ps-9Ca" secondAttribute="trailing" id="gJr-a0-4P3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vah-ps-9Ca" secondAttribute="bottom" constant="100" id="goD-u2-pcY"/>
+                            <constraint firstItem="2Q2-KV-yv9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ufR-wT-7qk"/>
+                            <constraint firstItem="2Q2-KV-yv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xK9-J0-4RM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnClickHere" destination="SN2-ID-cMX" id="P8B-og-4Ba"/>
+                        <outlet property="btnEnglish" destination="n9G-ao-PoJ" id="hN4-UI-LuJ"/>
+                        <outlet property="btnSpanish" destination="1JB-5d-mIf" id="Rwf-Xm-GWo"/>
+                        <outlet property="btnVietnamese" destination="xQG-D2-s7c" id="1S3-1j-Aw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="VtH-pl-X8h">
+            <objects>
+                <viewController title="Welcome" id="b9M-Bs-u0a" customClass="WelcomeViewController" customModule="iOSLocalization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQU-ti-QSr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mn0-YG-cWa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Welcome" id="wC2-0s-bbm"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU7-YW-I2L">
+                                <rect key="frame" x="171.5" y="430" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-gs-SFZ">
+                                <rect key="frame" x="190" y="732" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="didTapBack:" destination="b9M-Bs-u0a" eventType="touchUpInside" id="6Ow-W5-cCl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mn0-YG-cWa" firstAttribute="leading" secondItem="0uk-DG-2tZ" secondAttribute="leading" id="1vD-6M-GIi"/>
+                            <constraint firstItem="fd6-gs-SFZ" firstAttribute="centerX" secondItem="cQU-ti-QSr" secondAttribute="centerX" id="DMU-VC-z3m"/>
+                            <constraint firstItem="ZU7-YW-I2L" firstAttribute="centerY" secondItem="cQU-ti-QSr" secondAttribute="centerY" id="Klg-f1-GP2"/>
+                            <constraint firstItem="Mn0-YG-cWa" firstAttribute="trailing" secondItem="0uk-DG-2tZ" secondAttribute="trailing" id="Xug-1c-Zd0"/>
+                            <constraint firstItem="ZU7-YW-I2L" firstAttribute="centerX" secondItem="cQU-ti-QSr" secondAttribute="centerX" id="mF8-6J-z08"/>
+                            <constraint firstItem="0uk-DG-2tZ" firstAttribute="bottom" secondItem="fd6-gs-SFZ" secondAttribute="bottom" constant="100" id="rwd-hp-nlW"/>
+                            <constraint firstItem="Mn0-YG-cWa" firstAttribute="top" secondItem="0uk-DG-2tZ" secondAttribute="top" id="ywh-DK-acf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0uk-DG-2tZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cbf-Cb-38x"/>
+                    <connections>
+                        <outlet property="btnBack" destination="fd6-gs-SFZ" id="PcP-QI-IUB"/>
+                        <outlet property="titleLbl" destination="ZU7-YW-I2L" id="FoX-ge-LcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YD5-4q-eMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="30"/>
+        </scene>
+    </scenes>
+</document>
